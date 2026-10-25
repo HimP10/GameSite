@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Disguise Tab as Schoology -->
+  <title>Home | Schoology</title>
+  <link rel="icon" type="image/png" href="https://app.schoology.com/sites/all/themes/schoology_theme/favicon.ico">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">Portal</div>
+    <nav>
+      <a href="#games" onclick="showSection('games')">Games</a>
+      <a href="#apps" onclick="showSection('apps')">Apps</a>
+      <a href="#settings" onclick="showSection('settings')">Settings</a>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Games Section -->
+    <section id="games" class="tab-content active">
+      <h2>Game Library</h2>
+      <div class="card-grid">
+        <div class="card" onclick="openGame('https://example.com/game1')">
+          <div class="card-title">Game 1</div>
+        </div>
+        <div class="card" onclick="openGame('https://example.com/game2')">
+          <div class="card-title">Game 2</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="tab-content">
+      <h2>Utility Apps</h2>
+      <p>Add proxy links, tools, or other embedded sites here.</p>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <label for="tabTitle">Custom Tab Title:</label>
+      <input type="text" id="tabTitle" placeholder="e.g. Google Drive" oninput="updateTabTitle(this.value)">
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
